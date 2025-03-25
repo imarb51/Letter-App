@@ -1,0 +1,16 @@
+# Node.js dependencies
+node_modules/
+.vite/
+dist/
+
+# Environment Variables
+.env
+config/firebase-admin.json
+
+backend/config/firebase-admin.json
+
+# Logs & Cache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
