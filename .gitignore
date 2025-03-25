@@ -6,7 +6,7 @@ dist/
 # Environment Variables
 .env
 config/firebase-admin.json
-
+firebase-admin.json
 backend/config/firebase-admin.json
 
 # Logs & Cache

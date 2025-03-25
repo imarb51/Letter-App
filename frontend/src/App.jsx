@@ -1,12 +1,19 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import LetterEditor from "./pages/letterEditor";
 import Login from "./pages/Login";
+import { auth } from "./services/firebase"; 
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/dashboard" element={<h1>Dashboard (Coming Soon)</h1>} />
+        <Route path="/" element={<Navigate to="/dashboard" />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/editor/:letterId" element={<LetterEditor />} />
+        <Route path="*" element={<h1 className="text-center text-red-500">404 - Page Not Found</h1>} />
+
       </Routes>
     </Router>
   );
